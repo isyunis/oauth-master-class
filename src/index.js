@@ -19,12 +19,12 @@ window.onload = () => {
   document.getElementById("suggest").onclick = () => {
     YaAuthSuggest.init(
       {
-         client_id: "34727a94acb04d989e13d2b510099ded", 
-         response_type: "token",
-         redirect_uri: "https://oauth-master-class-omega.vercel.app/token.html",
+        client_id: "34727a94acb04d989e13d2b510099ded",
+        response_type: "token",
+        redirect_uri: "https://oauth-master-class-omega.vercel.app/token.html",
       },
-      "https://oauth-master-class-omega.vercel.app",
-   )
+      "https://oauth-master-class-omega.vercel.app"
+    )
       .then(({ handler }) => handler())
       .then(async (data) => {
         const result = await fetchYandexData(data.access_token);
@@ -36,13 +36,21 @@ window.onload = () => {
       .catch((error) => console.log("Что-то пошло не так: ", error));
   };
   document.getElementById("button").onclick = () => {
-       YaAuthSuggest.init({
-         client_id: '34727a94acb04d989e13d2b510099ded', 
-         response_type: 'token',
-         redirect_uri: 'https://oauth-master-class-omega.vercel.app/token.html',
+    window.YaAuthSuggest.init(
+      {
+        client_id: "34727a94acb04d989e13d2b510099ded",
+        response_type: "token",
+        redirect_uri: "https://oauth-master-class-omega.vercel.app/token.html",
       },
-      'https://oauth-master-class-omega.vercel.app',)
-                          
+      "https://oauth-master-class-omega.vercel.app",
+      {
+        parentId: "buttonContainer",
+        view: "button",
+        buttonTheme: "light",
+        buttonSize: "xs",
+        buttonBorderRadius: 20,
+      }
+    )
       .then(({ handler }) => handler())
       .then(async (data) => {
         const result = await fetchYandexData(data.access_token);
@@ -53,5 +61,7 @@ window.onload = () => {
       })
       .catch((error) => console.log("Что-то пошло не так: ", error));
   };
+};
+
 
 
