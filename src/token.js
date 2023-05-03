@@ -1,3 +1,7 @@
 window.onload = () => {
-  // TODO
+ YaSendSuggestToken(
+   'https://oauth-master-class-omega.vercel.app', {
+      flag: true
+   }
+)
 };
