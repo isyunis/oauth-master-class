@@ -20,11 +20,11 @@ window.onload = () => {
     YaAuthSuggest.init({
          client_id: '34727a94acb04d989e13d2b510099ded', 
          response_type: 'token',
-         redirect_uri: 'https://oauth-master-class-omega.vercel.app/token.html'
+         redirect_uri: 'https://oauth-master-class-omega.vercel.app/token.html',
       },
       'https://oauth-master-class-omega.vercel.app'
    )
-.then(({ handler }) => handler())
+      .then(({ handler }) => handler())
       .then(async (data) => {
         const result = await fetchYandexData(data.access_token);
 
@@ -33,12 +33,9 @@ window.onload = () => {
         console.log(result, data);
       })
       .catch((error) => console.log("Что-то пошло не так: ", error));
-    // TODO suggest
   };
   document.getElementById("button").onclick = () => {
     // TODO button
   };
 };
 
-34727a94acb04d989e13d2b510099ded
-https://oauth-master-class-omega.vercel.app/token.html
