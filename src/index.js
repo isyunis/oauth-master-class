@@ -21,9 +21,9 @@ window.onload = () => {
       {
         client_id: "179d6d4f23394e908828ef3a56475b1c",
         response_type: "token",
-        redirect_uri: "https://oauth-master-class-9lwk93kyc-isyunis.vercel.app/token.html",
+        redirect_uri: "https://oauth-master-class-omega.vercel.app/token.html",
       },
-      "https://oauth-master-class-9lwk93kyc-isyunis.vercel.app"
+      "https://oauth-master-class-omega.vercel.app"
     )
       .then(({ handler }) => handler())
       .then(async (data) => {
@@ -40,9 +40,9 @@ window.onload = () => {
       {
         client_id: "179d6d4f23394e908828ef3a56475b1c",
         response_type: "token",
-        redirect_uri: "https://oauth-master-class-9lwk93kyc-isyunis.vercel.app/token.html",
+        redirect_uri: "https://oauth-master-class-omega.vercel.app/token.html",
       },
-      "https://oauth-master-class-9lwk93kyc-isyunis.vercel.app",
+      "https://oauth-master-class-omega.vercel.app",
       {
         parentId: "buttonContainer",
         view: "button",
