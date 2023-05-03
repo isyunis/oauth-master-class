@@ -41,13 +41,12 @@ window.onload = () => {
          redirect_uri: 'https://oauth-master-class-omega.vercel.app/token.html',
       },
       'https://oauth-master-class-omega.vercel.app'
-      {
-        parentId: "buttonContainer",
-        view: "button",
-        buttonTheme: "dark",
-        buttonSize: "xs",
-        buttonBorderRadius: 20,
-      }
+   )
+   .then(({
+      handler
+   }) => handler())
+   .then(data => console.log('Сообщение с токеном', data))
+   .catch(error => console.log('Обработка ошибки', error));
    )
       .then(({ handler }) => handler())
       .then(async (data) => {
