@@ -17,12 +17,13 @@ const fetchYandexData = (token) =>
 
 window.onload = () => {
   document.getElementById("suggest").onclick = () => {
-    YaAuthSuggest.init({
-         client_id: '34727a94acb04d989e13d2b510099ded', 
-         response_type: 'token',
-         redirect_uri: 'https://oauth-master-class-omega.vercel.app/token.html',
+    YaAuthSuggest.init(
+      {
+         client_id: "34727a94acb04d989e13d2b510099ded", 
+         response_type: "token",
+         redirect_uri: "https://oauth-master-class-omega.vercel.app/token.html",
       },
-      'https://oauth-master-class-omega.vercel.app'
+      "https://oauth-master-class-omega.vercel.app",
    )
       .then(({ handler }) => handler())
       .then(async (data) => {
