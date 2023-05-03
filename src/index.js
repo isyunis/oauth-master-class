@@ -40,14 +40,8 @@ window.onload = () => {
          response_type: 'token',
          redirect_uri: 'https://oauth-master-class-omega.vercel.app/token.html',
       },
-      'https://oauth-master-class-omega.vercel.app'
-   )
-   .then(({
-      handler
-   }) => handler())
-   .then(data => console.log('Сообщение с токеном', data))
-   .catch(error => console.log('Обработка ошибки', error));
-   )
+      'https://oauth-master-class-omega.vercel.app',)
+                          
       .then(({ handler }) => handler())
       .then(async (data) => {
         const result = await fetchYandexData(data.access_token);
@@ -58,5 +52,5 @@ window.onload = () => {
       })
       .catch((error) => console.log("Что-то пошло не так: ", error));
   };
-};
+
 
